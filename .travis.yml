@@ -10,7 +10,7 @@ script :
 after_success :
   - echo "build success!"
 after_failure :
-  - echo "build success!"
+  - echo "build failure!"
 cache:
   directories :
   - "node_modules"
