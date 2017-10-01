@@ -1,0 +1,16 @@
+language : node__js
+node_js :
+  - "lts/*"
+before_script :
+  - npm install -g gulp-cli
+  - npm install
+script :
+  - npm run build
+  - npm run test
+after_success :
+  - echo "build success!"
+after_failure :
+  - echo "build success!"
+cache:
+  directories :
+  - "node_modules"
