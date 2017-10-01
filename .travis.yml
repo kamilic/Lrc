@@ -4,6 +4,7 @@ node__js :
   - 'lts/*'
 install:
   - nvm install stable
+  #use stable
   - nvm use stable
 before_script :
   - npm install -g gulp-cli
