@@ -2,6 +2,9 @@ language : node__js
 node__js :
   - 'stable'
   - 'lts/*'
+install:
+  - nvm install stable
+  - nvm use stable
 before_script :
   - npm install -g gulp-cli
   - npm install
