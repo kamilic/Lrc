@@ -1,0 +1,33 @@
+{
+  "name": "lrc",
+  "version": "1.0.0",
+  "description": "lrc file parser",
+  "main": "./dist/Lrc.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/kamilic/lrc"
+  },
+  "author": "kamilic",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.5.3",
+    "webpack": "^3.5.5"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0"
+  }
+}
