@@ -26,6 +26,8 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2015-rollup": "^3.0.0",
+    "babel-runtime": "^6.26.0",
+    "chalk": "^2.3.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
     "istanbul": "^0.4.5",
@@ -37,7 +39,6 @@
     "rollup-plugin-commonjs": "^8.2.6",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify-es": "0.0.1",
-    "yargs": "^10.0.3",
-    "babel-runtime": "^6.26.0"
+    "yargs": "^10.0.3"
   }
 }
