@@ -19,7 +19,7 @@ class LyricIDTagCollection {
 
 
     getTag(key = "") {
-        return this._tags.filter((v)=> v.tagKey == key)[0];
+        return this._tags.filter((v) => v.tagKey == key)[0];
     }
 
     setTag(key = "", value = "") {
@@ -48,8 +48,4 @@ LyricIDTagCollection
 LyricIDTagCollection
     .TAG_LRC_AUTHOR = "by";
 
-module
-    .exports = {
-    LyricIDTag,
-    LyricIDTagCollection
-};
+export {LyricIDTag, LyricIDTagCollection};

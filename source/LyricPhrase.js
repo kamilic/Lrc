@@ -3,7 +3,7 @@
  * @name LyricPhrase
  * @desc element of Lrc
  */
-const LyricTime = require("./LyricTime");
+import LyricTime from "./LyricTime";
 
 "use strict";
 class LyricPhrase {
@@ -47,4 +47,4 @@ class LyricPhrase {
 }
 
 
-module.exports = LyricPhrase;
+export default LyricPhrase;

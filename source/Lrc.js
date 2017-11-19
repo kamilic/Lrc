@@ -2,10 +2,10 @@
  * @author kamilic
  * @name Lrc
  */
-const {LyricIDTag , LyricIDTagCollection} = require("./LyricIDTag");
-const LyricParser = require("./LyricParser");
-const LyricTime = require("./LyricTime");
-const LyricPhrase = require("./LyricPhrase");
+import {LyricIDTagCollection} from "./LyricIDTag";
+import LyricParser from "./LyricParser";
+import LyricTime from "./LyricTime";
+import LyricPhrase from "./LyricPhrase";
 
 /**
  * @private
@@ -41,7 +41,7 @@ function insertionSort(arr) {
                     pos = j;
                 }
             }
-            if (min.timeInSecond != arr[i].timeInSecond) {
+            if (min.timeInSecond !== arr[i].timeInSecond) {
                 let temp = arr[i];
                 arr[i] = min;
                 arr[pos] = temp;
@@ -58,10 +58,10 @@ function insertionSort(arr) {
 class Lrc {
     constructor(text = "", sort) {
         let {lyricList, lyricTags} = _parse(text.toString());
-        this.lyricList = lyricList ||  /* istanbul ignore next */ [];
-        this.lyricTags = lyricTags ||  /* istanbul ignore next */ new LyricIDTagCollection();
+        this.lyricList = lyricList || /* istanbul ignore next */ [];
+        this.lyricTags = lyricTags || /* istanbul ignore next */ new LyricIDTagCollection();
         this.length = this.lyricList.length;
-        if(sort){
+        if (sort) {
             this.arrangePhrase();
         }
     }
@@ -71,7 +71,7 @@ class Lrc {
         list.forEach(func);
     }
 
-    eachTag(func){
+    eachTag(func) {
         let tagList = this.lyricTags;
         tagList.each(func);
     }
@@ -85,8 +85,8 @@ class Lrc {
 
     setPhrase(time, content, toArrange) {
         this.setPhraseByLyricPhase(new LyricPhrase(LyricTime.getInstanceByTime(time), content));
-        if(toArrange){
-           this.arrangePhrase();
+        if (toArrange) {
+            this.arrangePhrase();
         }
     }
 
@@ -108,13 +108,14 @@ class Lrc {
 
     output(configs = {type: "text"}) {
         /* istanbul ignore next */
-        switch (configs.type){
+        switch (configs.type) {
             /* istanbul ignore next */
             case "file":
             /* istanbul ignore next */
             case "blob":
             case "text":
-            default : return this.toString();
+            default :
+                return this.toString();
         }
     }
 
@@ -134,4 +135,4 @@ class Lrc {
     }
 }
 
-module.exports = Lrc;
+export default Lrc;

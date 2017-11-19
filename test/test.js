@@ -1,7 +1,7 @@
 "use strict";
-const Lrc = require("../dist/Lrc");
-const LyricPhrase = require("../dist/LyricPhrase");
-const LyricTime = require("../dist/LyricTime");
+const Lrc = require("../dist/Lrc.cjs");
+const LyricPhrase = Lrc.LyricPhrase;
+const LyricTime = Lrc.LyricTime;
 const fs = require('fs');
 const path = require('path');
 const assert = require('assert');

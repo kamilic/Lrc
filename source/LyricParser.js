@@ -2,6 +2,7 @@
  * @author kamilic
  * @name LyricParser
  */
+import regeneratorRuntime from "babel-runtime/regenerator/index.js"
 // if these are 2 (or above) specific time string at one line..([aa:bb.cc]).
 // eg [00:22:21][00:
 const MULIT_TIME_MATCH_LENGTH = "[aa:bb.cc][aa:bb.cc]".length ;
@@ -51,4 +52,4 @@ const LyricParser = {
     parseTag
 };
 
-module.exports = LyricParser;
+export default LyricParser;

@@ -83,6 +83,6 @@ LyricTime.getInstanceByTime = function (time) {
     return new LyricTime(`${mm}:${ss}.${xx}`);
 };
 
-module.exports = LyricTime;
+export default LyricTime ;
 
 
